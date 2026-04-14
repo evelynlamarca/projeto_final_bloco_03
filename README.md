@@ -71,4 +71,4 @@ export default defineConfig([
   },
 ])
 ```
-Projeto concluído com sucesso.
+# Projeto Farmácia Viva - Bloco 03 Finalizado em 14/04/2026.
