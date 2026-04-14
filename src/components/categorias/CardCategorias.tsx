@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
-import type Categoria from '../../models/Categoria'
+import { type Categoria } from '../../models/Categoria'
+//import { Pencil, Trash } from 'phosphor-react' 
+
 interface CardCategoriaProps {
   categoria: Categoria
 }
@@ -7,13 +9,20 @@ interface CardCategoriaProps {
 function CardCategorias({ categoria }: CardCategoriaProps) {
   return (
     <div className='border-slate-900 border flex flex-col rounded-2xl overflow-hidden justify-between'>
-      <header className='py-2 px-6 bg-blue-900 text-white font-bold text-2xl'>Categoria</header>
+      <header className='py-2 px-6 bg-indigo-800 text-white font-bold text-2xl'>
+        Categoria
+      </header>
+      
       <p className='p-8 text-3xl bg-slate-200 h-full'>{categoria.tipo}</p>
+
       <div className="flex">
-        <Link to={`/editarCategoria/${categoria.id}`} className='w-full text-slate-100 bg-blue-400 hover:bg-blue-600 flex items-center justify-center py-2'>
+        <Link to={`/editarCategoria/${categoria.id}`} 
+          className='w-full text-slate-100 bg-indigo-400 hover:bg-indigo-800 flex items-center justify-center py-2'>
           <button>Editar</button>
         </Link>
-        <Link to={`/deletarCategoria/${categoria.id}`} className='text-slate-100 bg-red-400 hover:bg-red-700 w-full flex items-center justify-center py-2'>
+
+        <Link to={`/deletarCategoria/${categoria.id}`} 
+          className='text-slate-100 bg-red-400 hover:bg-red-700 w-full flex items-center justify-center'>
           <button>Deletar</button>
         </Link>
       </div>

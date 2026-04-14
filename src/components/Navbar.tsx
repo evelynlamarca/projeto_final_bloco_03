@@ -1,29 +1,33 @@
-import { User, ShoppingCart, MagnifyingGlass } from '@phosphor-icons/react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 function Navbar() {
-    return (
-        <div className='flex justify-center w-full py-4 text-white bg-blue-900'>
-            <div className="container flex justify-between text-lg">
-                <Link to='/home' className='text-2xl font-bold uppercase'>Farmácia Viva</Link>
+  return (
+    <>
+      <div className='w-full bg-blue-950 text-white flex justify-center py-4'>
+        <div className="container flex justify-between text-lg px-4">
+          
+          {/* Nome do Site / Logo */}
+          <Link to='/home' className='text-2xl font-bold uppercase'>
+            Farmácia Viva
+          </Link>
 
-                <div className='relative flex items-center justify-center w-1/2 text-black'>
-                    <input className="w-full px-4 py-2 rounded-lg focus:outline-none"
-                        type="search" placeholder="Pesquisar produtos" />
-                    <button className='absolute right-2'>
-                        <MagnifyingGlass size={24} weight="bold" className='text-blue-900' />
-                    </button>
-                </div>
-
-                <div className='flex gap-4'>
-                    <Link to='/categorias' className='hover:underline'>Categorias</Link>
-                    <Link to='/cadastroCategoria' className='hover:underline'>Cadastrar Categoria</Link>
-                    <User size={32} weight='bold' />
-                    <ShoppingCart size={32} weight='bold' />
-                </div>
+          {/* Links de Navegação */}
+          <div className='flex gap-6 font-medium'>
+            <Link to='/categorias' className='hover:text-sky-300 transition-colors'>
+              Categorias
+            </Link>
+            <Link to='/cadastrocategoria' className='hover:text-sky-300 transition-colors'>
+              Cadastrar Categoria
+            </Link>
+            <div className='cursor-pointer hover:text-sky-300 transition-colors'>
+              Sair
             </div>
+          </div>
+
         </div>
-    )
+      </div>
+    </>
+  );
 }
 
-export default Navbar
+export default Navbar;
