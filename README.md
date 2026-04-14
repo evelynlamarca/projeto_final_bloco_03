@@ -71,4 +71,4 @@ export default defineConfig([
   },
 ])
 ```
-# Projeto Farmácia Viva - Entrega Concluída
+# Projeto Finalizado - Bloco 03
