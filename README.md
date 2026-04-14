@@ -71,4 +71,4 @@ export default defineConfig([
   },
 ])
 ```
-Projeto Finalizado.
+Projeto concluído com sucesso.
