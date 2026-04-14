@@ -1,4 +1,4 @@
-import farmImg from '../../assets/farm.webp';
+import farmImg from '../assets/farm.webp';
 function Home() {
     return (
         <div className="bg-sky-100 min-h-screen w-full flex justify-center items-center">
